@@ -1,0 +1,50 @@
+.wrapper {
+  font-family: "Inter";
+  color: #fff;
+  background-color: #373e45;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1730px;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 48px;
+  color: #ffffff4d;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 60px 40px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .subTitle {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    padding: 60px 15px;
+  }
+}
