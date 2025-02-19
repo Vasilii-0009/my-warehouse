@@ -1,6 +1,8 @@
+const API_URL = "https://jsonplaceholder.typicode.com/users";
+
 export const getUsers = async () => {
   try {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const response = await fetch(`${API_URL}/users`);
 
     if (!response.ok) {
       throw new Error(`Ошибка: ${response.status}`);
@@ -16,7 +18,7 @@ export const getUsers = async () => {
 
 export const getTodos = async () => {
   try {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+    const response = await fetch(`${API_URL}/todos`);
 
     if (!response.ok) {
       throw new Error(`Ошибка: ${response.status}`);
