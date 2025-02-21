@@ -1,4 +1,4 @@
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import { getTodos, getUsers } from "../../api/apiTable";
 import { Todo, User } from "../../common/models";
 import avatar from "../../img/avatar.svg";
@@ -6,7 +6,6 @@ import "./Tablet.css";
 
 export const Tablet = () => {
   const [users, setUsers] = useState<User[]>([]);
-  const [isPending, startTransition] = useTransition();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,9 +25,7 @@ export const Tablet = () => {
           };
         });
 
-        startTransition(() => {
-          setUsers(usersWithTodos);
-        });
+        setUsers(usersWithTodos);
       } catch (error) {
         console.error("Ошибка загрузки данных:", error);
       }
@@ -39,8 +36,6 @@ export const Tablet = () => {
 
   return (
     <div>
-      {isPending && <div>Загрузка данных...</div>}
-
       <table className="tablet">
         <thead className="tablet__thead">
           <tr className="tablet__thead-tr">
