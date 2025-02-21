@@ -15,7 +15,6 @@ export const getUsers = async () => {
     throw error;
   }
 };
-
 export const getTodos = async () => {
   try {
     const response = await fetch(`${API_URL}/todos`);
